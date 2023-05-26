@@ -4,13 +4,13 @@ html,body {
   padding: 0;
 }
 
-body {
+.body {
   box-sizing: border-box;
   display: flex;
   flex-direction: column;
   min-height: 100vh;
   background-color: @gray;
-  background-image: url("src/assets/images/noise.png"), url("src/assets/images/bg.png");
+  background-image: url("../assets/images/noise.png"), url("../assets/images/bg.png");
   background-position: 0 0, 0 0;
   background-size: auto, 100% auto;
   background-repeat: repeat, repeat-y;
@@ -22,6 +22,14 @@ body {
   line-height: 1.375;
   overflow-x: hidden;
   padding-top: 147px;
+
+  @media @bw1660 {
+    padding-top: 111px;
+  }
+
+  @media @bw768 {
+    padding-top: 70px;
+  }
 }
 
 .main {
@@ -42,3 +50,52 @@ img {
   height: auto;
   object-fit: cover;
 }
+
+input,
+textarea,
+select {
+  box-shadow: none;
+  outline: none;
+  color: @black;
+  font-family: @font1;
+}
+textarea {
+  resize: none;
+}
+
+input,
+textarea {
+  &::placeholder {
+    color: #6C6C6C;
+  }
+}
+input:focus,
+textarea:focus {
+  &::placeholder {
+    color: transparent
+  }
+}
+
+//чтото
+.show-nav {
+  body {
+    @media @bw1020 {
+      overflow: hidden;
+    }
+  }
+  .page-header__nav {
+    @media @bw1020 {
+      transform: translateX(0);
+    }
+  }
+  .page-header__nav-toggle {
+    &::before {
+      transform: translate(0px, 6px) rotate(45deg);
+      box-shadow: none;
+    }
+    &::after {
+      transform: translate(0px, -6px) rotate(-45deg);
+    }
+  }
+}
+

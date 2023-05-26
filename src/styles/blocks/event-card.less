@@ -3,12 +3,12 @@
   width: 405px;
   max-width: 100%;
   min-width: 280px;
+  color: @black;
 
   &__link {
     display: flex;
     flex-direction: column;
     width: 100%;
-    color: @black;
     text-decoration: none;
 
     &:hover .event-card__title {
@@ -53,12 +53,33 @@
     line-height: 33px;
     text-decoration: underline transparent;
     transition: color 0.2s, text-decoration-color 0.2s;
+
+    @media @bw1660 {
+      margin: 0 0 10px;
+    }
+
+    @media @bw1340 {
+      min-height: 54px;
+      font-size: 20px;
+      line-height: 27px;
+    }
+
+    @media @bw768 {
+      min-height: 44px;
+      font-size: 16px;
+      line-height: 22px;
+    }
   }
 
   &__description {
     margin: 0 0 auto;
     font-size: 16px;
     line-height: 22px;
+
+    @media @bw1020 {
+      font-size: 14px;
+      line-height: 19px;
+    }
   }
 
   &__time {

@@ -1,0 +1,104 @@
+<div class="pp" id="js-eventPP">
+  <div class="pp__wrapper">
+    <div class="pp__sticky-close">
+      @@include("x-btn.html")
+    </div>
+    <div class="pp__container">
+      <h2 class="pp__title">Заполните форму<br />и мы подберем площадку</h2>
+      <form class="pp__form form">
+        <div class="form__list">
+          <div class="field form__field form__field--w50">
+            <h6 class="field__title">Формат мероприятия:</h6>
+            <div class="field__radio radio">
+              @@loop('radio.html',[{
+              "value":"seminar",
+              "text":"Мастер-класс/семинар"},
+              {"value":"concert",
+              "text":"Концерт/выступление"},
+              {"value":"show",
+              "text":"Выставка/показ"},
+              {"value":"other",
+              "text":"Другое"}])
+            </div>
+          </div>
+
+          <div class="form__group form__group--w50">
+              @@include('select.html',{'class':'form__field field'})
+            <div class="form__field field">
+              <h6 class="field__title">Дата проведения:</h6>
+
+              <div class="field__date-inputs">
+                <input
+                        class="field__date-input"
+                        type="text"
+                        placeholder="ДД"
+                />
+                <input
+                        class="field__date-input"
+                        type="text"
+                        placeholder="ММ"
+                />
+                <input
+                        class="field__date-input field__date-input--year"
+                        type="text"
+                        placeholder="ГГГГ"
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="form__section">
+          <h6 class="form__section-title">Контакные данные:</h6>
+
+          <div class="form__list">
+            @@loop('field.html',[{
+            "labelClass":"field form__field form__field--w50",
+            "title":"Имя*",
+            "type":"text",
+            "placeholder":"Имя",
+            "name":"name"
+            },
+            {
+            "labelClass":"field form__field form__field--w50",
+            "title":"Фамилия*",
+            "type":"text",
+            "placeholder":"Фамилия",
+            "name":"last_name"
+            },
+            {
+            "labelClass":"field form__field form__field--w50",
+            "title":"Телефон*",
+            "type":"tel",
+            "placeholder":"Телефон",
+            "name":"phone"
+            },
+            {
+            "labelClass":"field form__field form__field--w50",
+            "title":"Email*",
+            "type":"email",
+            "placeholder":"Email",
+            "name":"email"
+            }])
+          </div>
+        </div>
+
+       @@include('textarea.html')
+
+        <div class="form__check-list">
+          @@include('check.html')
+        </div>
+
+        <div class="form__btns">
+          <button type="submit" class="btn form__submit form__submit--w50">
+            Отправить
+          </button>
+
+          <button type="button" class="form__close-btn js-ppCloseBtn">
+            Закрыть
+          </button>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>

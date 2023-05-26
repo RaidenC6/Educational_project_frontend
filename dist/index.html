@@ -1,13 +1,15 @@
 <!DOCTYPE html>
-<html lang="ru">
+<html lang="ru"> <!--class="show-event-popup"-->
 
 <head>
   <meta charset="UTF-8" />
   <title>Lenni Art</title>
+  <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no">
   <link rel="stylesheet" href="../../styles/styles.css">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Lora:wght@400;500;600;700&family=Open+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+
 </head>
 
 <body class="body">
@@ -24,12 +26,28 @@
         <a href="#" class="page-header__nav-link">Блог</a>
         <a href="#" class="page-header__nav-link">О нас</a>
         <a href="#" class="page-header__nav-link">Контакты</a>
+
+        <div class="page-header__nav-user">
+          <a href="#" class="page-header__nav-user-link">
+            Александр С.
+          </a>
+
+          <a href="#" class="page-header__nav-logout">
+            <svg class="page-header__nav-logout-icon" width="24" height="24">
+              <use xlink:href="assets/icons/symbols.svg#door"></use>
+            </svg>
+          </a>
+        </div>
       </nav>
 
       <div class="page-header__right-block">
         <a href="#" class="btn page-header__user-btn">
           Войти
+          <svg class="page-header__user-icon" width="21" height="18">
+            <use xlink:href="assets/icons/symbols.svg#user"></use>
+          </svg>
         </a>
+        <button type="button" class="page-header__nav-toggle" id="js-navToggle"></button>
       </div>
     </div>
   </header>
@@ -42,7 +60,10 @@
       <div class="choose">
         <p>Я ХОЧУ:</p>
         <div class="buttons">
-          <input class="buttons__event" type="button" value="Провести мероприятие">
+          <input class="buttons__event" type="button" value="Провести мероприятие" id="js-eventOpenBtn">
+          <!--      <button type="button" class="offers__btn btn btn&#45;&#45;red" id="js-eventOpenBtn">
+        Провести мероприятие
+      </button>-->
           <input class="buttons__renter" type="button" value="Стать арендатором">
         </div>
       </div>
@@ -53,6 +74,11 @@
           <article class="article-card listing__article-card">
             <a href="#" class="article-card__link">
               <picture class="article-card__picture">
+                <source media="(max-width: 450px)" type="image/webp" srcset="assets/images/blog/theatre.webp" />
+                <source media="(max-width: 450px)" srcset="assets/images/blog/theatre.jpg" />
+                <source media="(max-width: 1169px)" type="image/webp" srcset="assets/images/blog/theatre_tablet.webp" />
+                <source media="(max-width: 1169px)" srcset="assets/images/blog/theatre_tablet.jpg" />
+                <source type="image/webp" srcset="assets/images/blog/theatre.webp" />
                 <img src="assets/images/blog/theatre.jpg" alt="Theatre Photosession" class="article-card__img" />
               </picture>
             </a>
@@ -61,9 +87,11 @@
               <a href="#" class="article-card__title-link">
                 <h4 class="article-card__title">Фотосессия в стенах Театра драмы</h4>
                 <div class="article-card__arrow arrow">
-                  <svg class="arrow__icon" width="92" height="62">
-                    <use xlink:href="assets/icons/symbols.svg#arrow"></use>
-                  </svg>
+                  <button type="button" class="arrow">
+                    <svg class="arrow__icon" width="92" height="62">
+                      <use xlink:href="assets/icons/symbols.svg#arrow"></use>
+                    </svg>
+                  </button>
                 </div>
               </a>
               <p class="article-card__description">Организовывая фотосессию для локального бренда одежды мы смогли воплотить все пожелания заказчика и у нас получилась отличная работа. Смотрите как это было </p>
@@ -72,6 +100,11 @@
           <article class="article-card listing__article-card">
             <a href="#" class="article-card__link">
               <picture class="article-card__picture">
+                <source media="(max-width: 450px)" type="image/webp" srcset="assets/images/blog/VR.webp" />
+                <source media="(max-width: 450px)" srcset="assets/images/blog/VR.jpg" />
+                <source media="(max-width: 1169px)" type="image/webp" srcset="assets/images/blog/VR_tablet.webp" />
+                <source media="(max-width: 1169px)" srcset="assets/images/blog/VR_tablet.jpg" />
+                <source type="image/webp" srcset="assets/images/blog/VR.webp" />
                 <img src="assets/images/blog/VR.jpg" alt="VR Exhibition" class="article-card__img" />
               </picture>
             </a>
@@ -80,9 +113,11 @@
               <a href="#" class="article-card__title-link">
                 <h4 class="article-card__title">Выставка VR в Томске</h4>
                 <div class="article-card__arrow arrow">
-                  <svg class="arrow__icon" width="92" height="62">
-                    <use xlink:href="assets/icons/symbols.svg#arrow"></use>
-                  </svg>
+                  <button type="button" class="arrow">
+                    <svg class="arrow__icon" width="92" height="62">
+                      <use xlink:href="assets/icons/symbols.svg#arrow"></use>
+                    </svg>
+                  </button>
                 </div>
               </a>
               <p class="article-card__description">Клуб виртуальной реальности - это другие миры. яркие эмоции. новый опыт. ... Мы предоставляем нашим клиентам лучший игровой VR-опыт в Томске.</p>
@@ -91,6 +126,11 @@
           <article class="article-card listing__article-card">
             <a href="#" class="article-card__link">
               <picture class="article-card__picture">
+                <source media="(max-width: 450px)" type="image/webp" srcset="assets/images/blog/radio.webp" />
+                <source media="(max-width: 450px)" srcset="assets/images/blog/radio.jpg" />
+                <source media="(max-width: 1169px)" type="image/webp" srcset="assets/images/blog/radio_tablet.webp" />
+                <source media="(max-width: 1169px)" srcset="assets/images/blog/radio_tablet.jpg" />
+                <source type="image/webp" srcset="assets/images/blog/radio.webp" />
                 <img src="assets/images/blog/radio.jpg" alt="Rocking Radio" class="article-card__img" />
               </picture>
             </a>
@@ -99,9 +139,11 @@
               <a href="#" class="article-card__title-link">
                 <h4 class="article-card__title">Rocking radio в заброшенном ангаре</h4>
                 <div class="article-card__arrow arrow">
-                  <svg class="arrow__icon" width="92" height="62">
-                    <use xlink:href="assets/icons/symbols.svg#arrow"></use>
-                  </svg>
+                  <button type="button" class="arrow">
+                    <svg class="arrow__icon" width="92" height="62">
+                      <use xlink:href="assets/icons/symbols.svg#arrow"></use>
+                    </svg>
+                  </button>
                 </div>
               </a>
               <p class="article-card__description">15 электрогенераторов, километры проводов и пару тонн света. Все это для того, чтобы организовать лучшую вечеринку года для ребят из Новосибирска.</p>
@@ -111,6 +153,7 @@
         <a href="#" class="listing__link link">Смотреть все</a>
       </section>
     </div>
+
   </main>
   <footer class="page-footer">
     <div class="links">
@@ -142,6 +185,128 @@
       </label>
     </section>
   </footer>
+  <div class="pp" id="js-eventPP">
+    <div class="pp__wrapper">
+      <div class="pp__sticky-close">
+        <button class="pp__x-btn x-btn js-ppCloseBtn">
+          <svg class="x-btn__icon">
+            <use xlink:href="assets/icons/symbols.svg#x"></use>
+          </svg>
+        </button>
+      </div>
+      <div class="pp__container">
+        <h2 class="pp__title">Заполните форму
+          <br />и мы подберем площадку
+        </h2>
+        <form class="pp__form form">
+          <div class="form__list">
+            <div class="field form__field form__field--w50">
+              <h6 class="field__title">Формат мероприятия:</h6>
+              <div class="field__radio radio">
+
+                <label class="radio__item">
+                  <input class="radio__input" type="radio" name="format" value="seminar" checked>
+                  <span class="radio__mark"></span>
+                  <span class="radio__label">Мастер-класс/семинар</span>
+                </label>
+                <label class="radio__item">
+                  <input class="radio__input" type="radio" name="format" value="concert" checked>
+                  <span class="radio__mark"></span>
+                  <span class="radio__label">Концерт/выступление</span>
+                </label>
+                <label class="radio__item">
+                  <input class="radio__input" type="radio" name="format" value="show" checked>
+                  <span class="radio__mark"></span>
+                  <span class="radio__label">Выставка/показ</span>
+                </label>
+                <label class="radio__item">
+                  <input class="radio__input" type="radio" name="format" value="other" checked>
+                  <span class="radio__mark"></span>
+                  <span class="radio__label">Другое</span>
+                </label>
+              </div>
+            </div>
+
+            <div class="form__group form__group--w50">
+              <div class="form__field field">
+                <h6 class="field__title">Планируемое количество посетителей:</h6>
+                <select class="field__select" name="amount">
+                  <option value="20">до 20 человек</option>
+                  <option value="100">от 20 до 100 человек</option>
+                  <option value="500">от 100 до 500 человек</option>
+                  <option value="1000">более 500 человек</option>
+                </select>
+              </div>
+              <div class="form__field field">
+                <h6 class="field__title">Дата проведения:</h6>
+
+                <div class="field__date-inputs">
+                  <input class="field__date-input" type="text" placeholder="ДД" />
+                  <input class="field__date-input" type="text" placeholder="ММ" />
+                  <input class="field__date-input field__date-input--year" type="text" placeholder="ГГГГ" />
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="form__section">
+            <h6 class="form__section-title">Контакные данные:</h6>
+
+            <div class="form__list">
+              <!--Разметка однострочного поля ввода (для <input>)-->
+              <label class="field form__field form__field--w50">
+                <span class="field__label">Имя*</span>
+                <input class="field__input" type="text" placeholder="Имя" name="name" required>
+              </label>
+              <!--Разметка однострочного поля ввода (для <input>)-->
+              <label class="field form__field form__field--w50">
+                <span class="field__label">Фамилия*</span>
+                <input class="field__input" type="text" placeholder="Фамилия" name="last_name" required>
+              </label>
+              <!--Разметка однострочного поля ввода (для <input>)-->
+              <label class="field form__field form__field--w50">
+                <span class="field__label">Телефон*</span>
+                <input class="field__input" type="tel" placeholder="Телефон" name="phone" required>
+              </label>
+              <!--Разметка однострочного поля ввода (для <input>)-->
+              <label class="field form__field form__field--w50">
+                <span class="field__label">Email*</span>
+                <input class="field__input" type="email" placeholder="Email" name="email" required>
+              </label>
+
+            </div>
+          </div>
+
+          <label class="field form__field">
+            <span class="field__title">Есть пожелания? Напишите нам:</span>
+            <textarea class="field__textarea" name="Пожелания"></textarea>
+          </label>
+
+          <div class="form__check-list">
+            <label class="form__check check">
+              <input type="checkbox" name="agree" class="check__input" required checked />
+              <span class="check__mark"></span>
+              <span class="check__label check__label--s">
+                Я соглашаюсь с пользовательским соглашением и с политикой
+                использования персональных данных
+              </span>
+            </label>
+          </div>
+
+          <div class="form__btns">
+            <button type="submit" class="btn form__submit form__submit--w50">
+              Отправить
+            </button>
+
+            <button type="button" class="form__close-btn js-ppCloseBtn">
+              Закрыть
+            </button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+  <script src="scripts/main.js"></script>
 </body>
 
 </html>

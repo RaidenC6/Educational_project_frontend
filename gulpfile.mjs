@@ -171,3 +171,9 @@ export {
     serve,
     start
 };
+
+postcss([
+    sortMediaQueries({
+        sort: 'desktop-first'
+    })
+]);
