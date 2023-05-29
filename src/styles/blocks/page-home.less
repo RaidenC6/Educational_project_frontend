@@ -6,6 +6,21 @@
   &__listing {
     margin-bottom: 95px;
   }
+  &__icon
+  {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    left: 0;
+    top:0;
+  }
+  &__icon-wrapper{
+    position: relative;
+    height:0;
+    width: 100%;
+    padding: 0;
+    padding-bottom: 20%;
+  }
 }
 
 .quote {
@@ -17,16 +32,30 @@
   margin: 0 auto;
   padding-left: 40px;
   padding-right: 40px;
+  margin-top: 70px;
 }
 
 h1 {
   font-family: @font2;
-  font-size: 45px;
   font-weight: 400;
-  line-height: 58px;
+  font-size: 13px;
+  line-height: 17px;
   letter-spacing: 0;
   text-align: center;
-
+  margin:0;
+  margin-bottom: 70px;
+  @media @bw1660 {
+    font-size: 45px;
+    line-height: 58px;
+  }
+  @media @bw1340 {
+    font-size: 35px;
+    line-height: 45px;
+  }
+  @media @bw768 {
+    font-size: 30px;
+    line-height: 38px;
+  }
 }
 
 .buttons{

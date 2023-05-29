@@ -53,8 +53,13 @@
   </header>
   <main class="main">
     <div class="home">
+      <h1>АРТ - ПРОСТРАНСТВО</h1>
+      <div class="home__icon-wrapper">
+        <svg class="home__icon">
+          <use xlink:href="assets/icons/symbols.svg#LENNI"></use>
+        </svg>
+      </div>
       <div class="quote">
-        <h1>АРТ - ПРОСТРАНСТВО</h1>
         <h1>ДЛЯ ЛЮДЕЙ, ГОРЯЩИХ СЕРДЕЦ И ДЕЛОМ МЕСТО НАСТОЯЩЕГО</h1>
       </div>
       <div class="choose">
@@ -67,6 +72,83 @@
           <input class="buttons__renter" type="button" value="Стать арендатором">
         </div>
       </div>
+      <section class="events listing home__listing  @@class">
+        <div class="">
+          <div class="">
+            <h2 class="section-title">Мероприятия</h2>
+            <div class="upcoming__swiper swiper swiper--3s js-swiper">
+              <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                  <!-- prettier-ignore -->
+                  <article class="event-card  ">
+                    <a href="#" class="event-card__link">
+                      <picture class="event-card__picture">
+                        <img src="assets/images/events/nirvana.jpg" alt="nirvana" class="event-card__img" />
+                      </picture>
+                      <h4 class="event-card__title">Собираемся и слушаем альбом Nirvana.</h4>
+                      <p class="event-card__description">Это третий альбом группы, выпущенный после смерти Курта Кобейна и первый, содержащий студийный материал.</p>
+                      <time datetime="2022-12-07T18:00" class="event-card__time">07.12.2022 | начало 18.00</time>
+                    </a>
+                  </article>
+                </div>
+                <div class="swiper-slide">
+                  <!-- prettier-ignore -->
+                  <article class="event-card  ">
+                    <a href="#" class="event-card__link">
+                      <picture class="event-card__picture">
+                        <img src="assets/images/events/stuff.jpg" alt="stuff" class="event-card__img" />
+                      </picture>
+                      <h4 class="event-card__title">Есть тема, нужно обсудить с HowStuffWorks</h4>
+                      <p class="event-card__description">Один из самых популярных подкастов в мире. В нём авторы объясняют, как устроены разные вещи.</p>
+                      <time datetime="2022-12-14T18:30" class="event-card__time">14.12.2022 | начало 18.30</time>
+                    </a>
+                  </article>
+                </div>
+                <div class="swiper-slide">
+                  <!-- prettier-ignore -->
+                  <article class="event-card  ">
+                    <a href="#" class="event-card__link">
+                      <picture class="event-card__picture">
+                        <img src="assets/images/events/sade.jpg" alt="sade" class="event-card__img" />
+                      </picture>
+                      <h4 class="event-card__title">Вечер | The Best of Sade</h4>
+                      <p class="event-card__description">Музыка группы имеет эклектичный характер, сочетая в себе элементы музыки соул, джаза, ритм-блюза и фанка.</p>
+                      <time datetime="2022-12-16T20:00" class="event-card__time">16.12.2022 | начало 20.00</time>
+                    </a>
+                  </article>
+                </div>
+                <div class="swiper-slide">
+                  <!-- prettier-ignore -->
+                  <article class="event-card  ">
+                    <a href="#" class="event-card__link">
+                      <picture class="event-card__picture">
+                        <img src="assets/images/events/nirvana.jpg" alt="nirvana" class="event-card__img" />
+                      </picture>
+                      <h4 class="event-card__title">Собираемся и слушаем альбом Nirvana.</h4>
+                      <p class="event-card__description">Это третий альбом группы...</p>
+                      <time datetime="2022-12-07T18:00" class="event-card__time">07.12.2022 | начало 18.00</time>
+                    </a>
+                  </article>
+                </div>
+              </div>
+              <footer class="swiper-footer">
+                <button type="button" class="swiper-arrow-prev arrow arrow--left">
+                  <svg class="arrow__icon" width="92" height="62">
+                    <use xlink:href="assets/icons/symbols.svg#arrow"></use>
+                  </svg>
+                </button>
+                <div class="swiper-pagination"></div>
+                <button type="button" class="swiper-arrow-next arrow">
+                  <svg class="arrow__icon" width="92" height="62">
+                    <use xlink:href="assets/icons/symbols.svg#arrow"></use>
+                  </svg>
+                </button>
+              </footer>
+            </div>
+            <a href="#" class="events__link link">Смотреть все</a>
+          </div>
+        </div>
+      </section>
       <section class="listing home__listing">
         <h2 class="listing__title section-title">Блог</h2>
         <div class="listing__article-list">
@@ -306,6 +388,7 @@
       </div>
     </div>
   </div>
+  <script src="scripts/swiper.js"></script>
   <script src="scripts/main.js"></script>
 </body>
 
