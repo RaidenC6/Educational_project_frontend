@@ -53,14 +53,14 @@
   </header>
   <main class="main">
     <div class="home">
-      <h1>АРТ - ПРОСТРАНСТВО</h1>
+      <h4 class="home__titls">АРТ - ПРОСТРАНСТВО</h4>
       <div class="home__icon-wrapper">
         <svg class="home__icon">
           <use xlink:href="assets/icons/symbols.svg#LENNI"></use>
         </svg>
       </div>
+      <h4 class="home__titls home__titls__bottom">ДЛЯ ЛЮДЕЙ, ГОРЯЩИХ СЕРДЕЦ И ДЕЛОМ МЕСТО НАСТОЯЩЕГО</h4>
       <div class="quote">
-        <h1>ДЛЯ ЛЮДЕЙ, ГОРЯЩИХ СЕРДЕЦ И ДЕЛОМ МЕСТО НАСТОЯЩЕГО</h1>
       </div>
       <div class="choose">
         <p>Я ХОЧУ:</p>
@@ -72,6 +72,35 @@
           <input class="buttons__renter" type="button" value="Стать арендатором">
         </div>
       </div>
+      <section class="about listing home__listing">
+        <h1 class="section-title">О нас</h1>
+        <div class="about__container">
+          <div class="about__info">
+            <h1 class="about__info__title">Проект «Millennials»</h1>
+            <p class="about__info__desc">Вдохновлен молодыми идейными людьми, увлеченными творчеством, эмоциями и желанием сделать мир лучше, проявить себя. У них есть талант и стремление, у нас возможность помочь им воплотить их мечту в реальность.</p>
+          </div>
+          <picture class="about__picture about__picture__main">
+            <img src="assets/images/about/rock.jpg" alt="rock">
+          </picture>
+          <!--<div class="about__info">
+            <h4 class="about__info__title">Мы предоставляем площади для вашего мероприятия</h4>
+            <p class="about__info__desc">И оказываем помощь с организацией, если вам это нужно.
+                Наша цель: вовлечь в культурную жизнь города как можно больше людей, помочь молодым ребятам сделать первые шаги к своей мечте и рассказать всем о том, что их волнует.</p>
+        </div>-->
+          <picture class="about__picture about__picture__sub ">
+            <img src="assets/images/about/culture.jpg" alt="culture">
+          </picture>
+
+          <!--<picture class="about__redpicture">
+            <img src="assets/images/about/meet.jpg" alt="meet">
+        </picture>
+        <p class="about__info__desc">Мы уже успешно организовали и провели более 100 проектов. Посмотрите, как это было классно.</p>
+        <div class="about_ref">
+            <a href="#">Смотреть</a>
+            <svg></svg>
+        </div>-->
+        </div>
+      </section>
       <section class="events listing home__listing  @@class">
         <div class="">
           <div class="">
@@ -238,34 +267,39 @@
 
   </main>
   <footer class="page-footer">
-    <div class="links">
-      <div class="rectangle"></div>
-      <ul class="links links__list">
-        <li class="links__calendar">
-          <a href="">Календарь мероприятий</a>
-        </li>
-        <li class="links__event">
-          <a href="">Провести мероприятие</a>
-        </li>
-        <li class="links__renter">
-          <a href="">Стать арендатором</a>
-        </li>
-        <li class="links__projects">
-          <a href="">Наши проекты</a>
-        </li>
-        <li class="links__contacts">
-          <a href="">Контакты</a>
-        </li>
-      </ul>
+    <div class="page-footer__container">
+      <div class="page-footer__lines">
+        <div class="page-footer__lines-line"></div>
+        <div class="page-footer__lines-line line-left"></div>
+      </div>
+      <div class="page-footer__information">
+        <div class="page-footer__information-links">
+          <a href="#" class="page-footer__information-link">Календарь мероприятий</a>
+          <a href="#" class="page-footer__information-link">Провести мероприятие</a>
+          <a href="#" class="page-footer__information-link">Стать арендатором</a>
+          <a href="#" class="page-footer__information-link">Наши проекты</a>
+          <a href="#" class="page-footer__information-link">Контакты</a>
+        </div>
+        <form class="feedback">
+          <h4 class="feedback__title">Подпишись и будь в курсе происходящего</h4>
+          <!--    <input class="btn feedback__subscription__email" type="email" placeholder="Email"/>-->
+
+          <label class="feedback__subscription">
+            <input class="feedback__field" type="email" placeholder="Email" name="email" required>
+            <button class="btn feedback__subscription__button" type="submit">Подписаться</button>
+          </label>
+          <div class="form__check-list">
+            <label class="form__check check">
+              <input type="checkbox" name="agree" class="check__input" required checked />
+              <span class="check__mark"></span>
+              <span class="check__label check__label--s">
+                Согласен на обработку персональных данных
+              </span>
+            </label>
+          </div>
+        </form>
+      </div>
     </div>
-    <section class="subscription">
-      <h2>Подпишись и будь в курсе происходящего</h2>
-      <input class="subscription__email" type="email" placeholder="Email" />
-      <button class="subscription__button" type="submit">Подписаться</button>
-      <label>
-        <input class="subscription__checkbox" type="checkbox" />Согласен на обработку персональных данных
-      </label>
-    </section>
   </footer>
   <div class="pp" id="js-eventPP">
     <div class="pp__wrapper">
@@ -369,8 +403,7 @@
               <input type="checkbox" name="agree" class="check__input" required checked />
               <span class="check__mark"></span>
               <span class="check__label check__label--s">
-                Я соглашаюсь с пользовательским соглашением и с политикой
-                использования персональных данных
+                Я соглашаюсь с пользовательским соглашением и с политикой использования персональных данных
               </span>
             </label>
           </div>

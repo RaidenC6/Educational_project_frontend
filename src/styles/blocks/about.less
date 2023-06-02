@@ -1,0 +1,66 @@
+.about
+{
+  &__container {
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+  }
+  &__info {
+    font-family: @font1;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+    grid-auto-rows: auto;
+    gap: 0 0;
+    grid-template-areas:
+    "title title title . . ."
+    ". . desc desc desc desc";
+    margin:0;
+    &__title
+    {
+      display: inline-block;
+      grid-area: title;
+      margin: 0 0 50px 0;
+      font-weight: 700;
+      font-size: 44px;
+      line-height: 60px;
+    }
+    &__desc
+    {
+      grid-area: desc;
+      margin: 0 0 100px 0;
+      font-weight: 400;
+      font-size: 18px;
+      line-height: 25px;
+    }
+  }
+/*  &__subpicture{
+    position: relative;
+    margin-top: -735px;
+
+    width: 100%;
+    justify-content: flex-end;
+    display: flex;
+  }*/
+  &__picture{
+    display: grid;
+    grid-row:2;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
+    gap: 0 0;
+    grid-template-areas:
+    "main main main main . . ."
+    "main main main main . . ."
+    "main main main main sub sub sub"
+    "main main main main sub sub sub"
+    ". . . . sub sub sub";
+
+    max-width:calc(100% - 430px);
+    margin-bottom: 100px;
+    &__main{
+      grid-area: main;
+    }
+    &__sub{
+      grid-area: sub;
+    }
+  }
+}

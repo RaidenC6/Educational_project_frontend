@@ -1,0 +1,20 @@
+<form class="feedback">
+  <h4 class="feedback__title">Подпишись и будь в курсе происходящего</h4>
+<!--    <input class="btn feedback__subscription__email" type="email" placeholder="Email"/>-->
+ <!--   @@include("field.html",{
+    "labelClass":"",
+    "inputClass":"feedback__field",
+    "spanClass":"feedback__title",
+    "title":"Подпишись и будь в курсе происходящего",
+    "type":"email",
+    "placeholder":"Email",
+    "name":""
+    })-->
+    <label class="feedback__subscription">
+        <input class="feedback__field" type="email" placeholder="Email" name="email" required>
+        <button class="btn feedback__subscription__button" type="submit">Подписаться</button>
+    </label>
+    <div class="form__check-list">
+        @@include('check.html', {"text":"Согласен на обработку персональных данных"})
+    </div>
+</form>

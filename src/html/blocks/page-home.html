@@ -1,12 +1,12 @@
 <div class="home">
-  <h1>АРТ - ПРОСТРАНСТВО</h1>
+  <h4 class="home__titls">АРТ - ПРОСТРАНСТВО</h4>
   <div class="home__icon-wrapper">
     <svg class="home__icon">
       <use xlink:href="assets/icons/symbols.svg#LENNI"></use>
     </svg>
   </div>
+  <h4 class="home__titls home__titls__bottom">ДЛЯ ЛЮДЕЙ, ГОРЯЩИХ СЕРДЕЦ И ДЕЛОМ МЕСТО НАСТОЯЩЕГО</h4>
   <div class="quote">
-    <h1>ДЛЯ ЛЮДЕЙ, ГОРЯЩИХ СЕРДЕЦ И ДЕЛОМ МЕСТО НАСТОЯЩЕГО</h1>
   </div>
   <div class="choose">
     <p>Я ХОЧУ:</p>
@@ -18,6 +18,7 @@
       <input class="buttons__renter" type="button" value="Стать арендатором">
     </div>
   </div>
+  @@include('about.html')
   @@include('events.html')
   @@include('blog-listing.html', {"class": "home__listing"})
 </div>
