@@ -1,24 +1,31 @@
-<div class="home">
-  <h4 class="home__titls">АРТ - ПРОСТРАНСТВО</h4>
-  <div class="home__icon-wrapper">
-    <svg class="home__icon">
+<div class="page-home">
+  <h4 class="page-home__title">АРТ - ПРОСТРАНСТВО</h4>
+  <div class="page-home__icon-wrapper">
+    <svg class="page-home__icon">
       <use xlink:href="assets/icons/symbols.svg#LENNI"></use>
     </svg>
   </div>
-  <h4 class="home__titls home__titls__bottom">ДЛЯ ЛЮДЕЙ, ГОРЯЩИХ СЕРДЕЦ И ДЕЛОМ МЕСТО НАСТОЯЩЕГО</h4>
-  <div class="quote">
-  </div>
-  <div class="choose">
-    <p>Я ХОЧУ:</p>
-    <div class="buttons">
-      <input class="buttons__event" type="button" value="Провести мероприятие" id="js-eventOpenBtn">
-<!--      <button type="button" class="offers__btn btn btn&#45;&#45;red" id="js-eventOpenBtn">
-        Провести мероприятие
-      </button>-->
-      <input class="buttons__renter" type="button" value="Стать арендатором">
+  <h4 class="page-home__title page-home__title-bottom">ДЛЯ ЛЮДЕЙ, ГОРЯЩИХ СЕРДЕЦ И ДЕЛОМ МЕСТО НАСТОЯЩЕГО</h4>
+  <div class="page-home__choose">
+    <h3 class="page-home__choose-text" >Я ХОЧУ:</h3>
+    <div class="page-home__buttons">
+      <input class="js-eventOpen page-home__buttons-event" type="button" value="Провести мероприятие">
+      <input class="page-home__buttons-renter" type="button" value="Стать арендатором">
     </div>
   </div>
   @@include('about.html')
   @@include('events.html')
-  @@include('blog-listing.html', {"class": "home__listing"})
+  @@include('blog-listing.html')
+  @@include('contacts.html')
+  <div class="page-home__bottom">
+    <p class="page-home__bottom-line1">
+      Просто делайте,
+    </p>
+    <p class="page-home__bottom-line2">
+      что нравится,
+    </p>
+    <p class="page-home__bottom-line3">
+      а мы вам поможем
+    </p>
+  </div>
 </div>

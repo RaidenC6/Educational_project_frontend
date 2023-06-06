@@ -1,5 +1,5 @@
 <form class="feedback">
-  <h4 class="feedback__title">Подпишись и будь в курсе происходящего</h4>
+  <h6 class="feedback__title">Подпишись и будь в курсе происходящего</h6>
 <!--    <input class="btn feedback__subscription__email" type="email" placeholder="Email"/>-->
  <!--   @@include("field.html",{
     "labelClass":"",
@@ -15,6 +15,6 @@
         <button class="btn feedback__subscription__button" type="submit">Подписаться</button>
     </label>
     <div class="form__check-list">
-        @@include('check.html', {"text":"Согласен на обработку персональных данных"})
+        @@include('check.html', {"id":"feedback_agree", "text":"Согласен на обработку персональных данных"})
     </div>
 </form>

@@ -1,17 +1,17 @@
 .events {
   margin-bottom: 100px;
 
-  padding: 140px 0 100px;
   background-color: @white;
   clip-path: polygon(0% 0%, 0% 100%,75% 98%, 100% 100%, 100% 0%, 25% 2%);
-  &__link {
-    display: flex;
-    justify-content: flex-end;
-    margin-right: 10px;
-    margin-top: 15px;
-    &:hover {
-          color: @red;
-          text-decoration-color: @red;
-        }
+
+  padding: 140px 0 100px;
+  @media @bw1340 {
+    padding: 90px 0 100px;
+  }
+  @media @bw768 {
+    padding: 80px 0 100px;
+  }
+  &__listing {
+    margin-bottom: 100px;
   }
 }

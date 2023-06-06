@@ -4,14 +4,11 @@
   display: flex;
   position: relative;
   width: 100%;
-
-  /*@media @bw1660 {
-    height: 111px;
-  }
+  margin-bottom: 60px;
 
   @media @bw768 {
-    height: 70px;
-  }*/
+    margin-bottom: 50px;
+  }
 
   &__container {
     .container;
@@ -62,7 +59,7 @@
   &__information-links {
     position: relative;
     padding-left: 26px;
-    margin: 0 40px 60px 0;
+    margin-right: 40px;
     display: flex;
     flex-direction: column;
     align-items: flex-start;
@@ -80,17 +77,123 @@
     }
   }
 
-
   &__information-link {
     text-decoration: none;
     font-weight: 600;
     line-height: 22px;
     display: flex;
     color: @black;
+    cursor: pointer;
 
     &:hover {
       color: @red_dark;
       transition: color 0.2s;
+    }
+  }
+
+  &__btns {
+    display: flex;
+    width: 164px;
+    justify-content: space-between;
+    margin: 100px auto 75px auto;
+
+    @media @bw1920 {
+      margin-top: 60px;
+    }
+
+    @media @bw1340 {
+      margin-bottom: 60px;
+    }
+
+    @media @bw768 {
+      margin-top: 30px;
+      margin-bottom: 20px;
+      width: 130px;
+    }
+  }
+
+  &__btn-icon {
+    width: 27px;
+    height: 27px;
+    margin: auto;
+    color: @white;
+  }
+
+  &__links {
+    width: 100%;
+    margin-top: 20px;
+    display: flex;
+    justify-content: space-between;
+
+    @media @bw768 {
+      flex-wrap: wrap;
+    }
+  }
+
+  &__millennials {
+    .p();
+
+    margin-top: -135px;
+    margin-bottom: 0;
+
+    @media @bw1340 {
+      margin-top: 0;
+    }
+
+    @media @bw768 {
+      position: relative;
+      top: 110px;
+      text-align: right;
+    }
+  }
+
+  &__links-h5 {
+    .h5();
+
+    margin: 0;
+  }
+
+  &__links-policy {
+    display: flex;
+    flex-direction: row;
+    margin: 0;
+    gap: 60px;
+
+    @media @bw1340 {
+      gap: 15px;
+    }
+
+    @media @bw768 {
+      flex-direction: column;
+      margin-bottom: 40px;
+      margin-right: 50%;
+    }
+
+    @media @bw600 {
+      margin-right: 15%;
+    }
+  }
+
+  &__links-tagree {
+    display: flex;
+    flex-direction: row;
+    margin: 0;
+    gap: 15px;
+
+    @media @bw768 {
+      margin-left: auto;
+    }
+  }
+
+  &__tagree-icon {
+    width: 56px;
+    height: 17px;
+    padding-top: 3px;
+    color: @black;
+    transition: color 0.2s;
+
+    &:hover {
+      color: @red_dark;
     }
   }
 }

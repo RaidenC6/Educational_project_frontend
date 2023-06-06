@@ -3,6 +3,10 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
+
+    @media @bw768 {
+      flex-direction: column;
+    }
   }
 
   &__field,
@@ -10,6 +14,10 @@
     width: 100%;
     &--w50 {
       width: calc(50% - 30px);
+
+      @media @bw768 {
+        width: 100%;
+      }
     }
   }
 
@@ -26,6 +34,7 @@
 
   &__check {
     margin-bottom: 10px;
+
     &:last-child {
       margin-bottom: 0;
     }
@@ -48,11 +57,19 @@
     align-items: center;
     margin-top: 10px;
 
+    @media @bw768 {
+        flex-direction: column;
+    }
+
   }
 
   &__submit {
     &--w50 {
       width: calc(50% - 30px);
+
+      @media @bw768 {
+        max-width: 240px;
+      }
     }
   }
 
@@ -69,7 +86,13 @@
     transition: color 0.2s;
 
     &:hover {
-      color: @red;
+      @media (hover: hover) {
+        color: @red_dark;
+      }
+    }
+
+    @media @bw768 {
+      margin: 35px auto;
     }
   }
 

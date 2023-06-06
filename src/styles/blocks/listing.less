@@ -1,7 +1,36 @@
 .listing {
-  .container;
+
+  &__container{
+    .container();
+  }
+  
   display: flex;
   flex-direction: column;
+
+  &__link {
+    display: flex;
+    justify-content: flex-end;
+    margin-right: 10px;
+    margin-top: 15px;
+    text-decoration: none;
+
+    &__blog{
+      margin-top: 70px;
+      @media @bw1170 {
+        max-width: 708px;
+        margin: 55px auto 0;
+      }
+      @media @bw650 {
+        margin-top: 45px;
+      }
+    }
+
+    &:hover {
+      @media (hover: hover) {
+        color: @red;
+      }
+    }
+  }
 
   &__events-list {
     display: flex;
@@ -33,7 +62,6 @@
   &__event-card {
     width: calc(33.3333% - 60px);
     margin: 0 30px 120px;
-
     @media @bw1660 {
       width: calc(33.3333% - 40px);
       margin: 0 20px 100px;

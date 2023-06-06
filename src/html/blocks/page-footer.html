@@ -7,12 +7,43 @@
         <div class="page-footer__information">
             <div class="page-footer__information-links">
                 <a href="#" class="page-footer__information-link">Календарь мероприятий</a>
-                <a href="#" class="page-footer__information-link">Провести мероприятие</a>
+                <a class="js-eventOpen page-footer__information-link">Провести мероприятие</a>
                 <a href="#" class="page-footer__information-link">Стать арендатором</a>
                 <a href="#" class="page-footer__information-link">Наши проекты</a>
-                <a href="#" class="page-footer__information-link">Контакты</a>
+                <a href="#contacts" class="page-footer__information-link">Контакты</a>
             </div>
             @@include('feedback.html')
+        </div>
+        <div class="page-footer__btns">
+            <form action="https://vk.com" target="_blank">
+                <button class="x-btn">
+                    <svg class="page-footer__btn-icon">
+                        <use xlink:href="assets/icons/symbols.svg#vk"></use>
+                    </svg>
+                </button>
+            </form>
+            <form action="https://www.instagram.com" target="_blank">
+                <button class="x-btn">
+                    <svg class="page-footer__btn-icon">
+                        <use xlink:href="assets/icons/symbols.svg#instagram"></use>
+                    </svg>
+                </button>
+            </form>
+        </div>
+        <p class="page-footer__millennials">© Millennials 2022</p>
+        <div class="page-footer__links">
+            <div class="page-footer__links-policy">
+                <p class="page-footer__links-h5">Политика конфиденциальности</p>
+                <p class="page-footer__links-h5">Cookies</p>
+            </div>
+            <div class="page-footer__links-tagree">
+                <p class="page-footer__links-h5">Создание и продвижение</p>
+                <a href="https://tagree.ru/agency/" target="_blank">
+                    <svg class="page-footer__tagree-icon">
+                        <use xlink:href="assets/icons/symbols.svg#tagree"></use>
+                    </svg>
+                </a>
+            </div>
         </div>
     </div>
 </footer>

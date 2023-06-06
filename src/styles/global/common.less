@@ -10,9 +10,11 @@ html,body {
   flex-direction: column;
   min-height: 100vh;
   background-color: @gray;
-  background-image: url("../assets/images/noise.png"), url("../assets/images/bg.png");
+  background-image:
+          url("../assets/images/noise.png"),
+          url("../assets/images/bg.png");
   background-position: 0 0, 0 0;
-  background-size: auto, 100% auto;
+  background-size: 100%;
   background-repeat: repeat, repeat-y;
   color: @black;
   font-family: @font1;
@@ -25,10 +27,22 @@ html,body {
 
   @media @bw1660 {
     padding-top: 111px;
+    background-image:
+          url("../assets/images/noise.png"),
+          url("../assets/images/bg_1340.png");
   }
 
   @media @bw768 {
     padding-top: 70px;
+    background-image:
+          url("../assets/images/noise.png"),
+          url("../assets/images/bg_768.png");
+  }
+
+  @media @bw650 {
+    background-image:
+            url("../assets/images/noise.png"),
+            url("../assets/images/bg_320.png");
   }
 }
 
@@ -99,3 +113,6 @@ textarea:focus {
   }
 }
 
+.error{
+  color:@red;
+}

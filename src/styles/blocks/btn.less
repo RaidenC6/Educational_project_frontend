@@ -18,7 +18,9 @@
   cursor: pointer;
 
   &:hover {
-    background-color: @black;
-    color: @white;
+    @media (hover: hover) {
+      background-color: @black;
+      color: @white;
+    }
   }
 }

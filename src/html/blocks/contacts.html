@@ -1,0 +1,40 @@
+<section id="contacts" class="contacts">
+    <div class="contacts__container">
+        <h2 class="section-title">Контакты</h2>
+        <div class="contacts__table">
+            <div class="contacts__table_column1">
+                @@loop('location.html', [{
+                "img": "circle",
+                "title": "Томск, Белая 8",
+                "descr": "2 этаж",
+                "descr2": "оф. 207-208",
+                },
+                {
+                "img": "home",
+                "title": "Отдел аренды",
+                "descr": "+7 499 350 0730",
+                "descr2": "hi@tagree.ru",
+                },
+                {
+                "img": "star",
+                "title": "Отдел мероприятий ",
+                "descr": "+7 499 350 0730",
+                "descr2": "hi@tagree.ru",
+                }])
+            </div>
+            <div class="contacts__table_column2">
+                <picture class="contacts__table_column2__map">
+                    <source media="(max-width: 319px)"
+                            type="image/webp"
+                            srcset="assets/images/map/contact_map_sx.webp"
+                    />
+                    <source media="(max-width: 767px)"
+                            type="image/webp"
+                            srcset="assets/images/map/contact_map_s.webp"/>
+
+                    <img src="assets/images/map/contact_map.webp" alt="map">
+                </picture>
+            </div>
+        </div>
+    </div>
+</section>

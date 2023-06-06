@@ -5,6 +5,8 @@
   <meta charset="UTF-8" />
   <title>Lenni Art</title>
   <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no">
+  <link rel="icon" type="image/png" sizes="16x16" href="/assets/icons/favicon-16x16.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/assets/icons/favicon-32x32.png">
   <link rel="stylesheet" href="../../styles/styles.css">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -22,10 +24,10 @@
       </a>
 
       <nav class="page-header__nav">
-        <a href="#" class="page-header__nav-link">Мероприятия</a>
-        <a href="#" class="page-header__nav-link">Блог</a>
-        <a href="#" class="page-header__nav-link">О нас</a>
-        <a href="#" class="page-header__nav-link">Контакты</a>
+        <a href="#events" class="page-header__nav-link">Мероприятия</a>
+        <a href="#listing" class="page-header__nav-link">Блог</a>
+        <a href="#about" class="page-header__nav-link">О нас</a>
+        <a href="#contacts" class="page-header__nav-link">Контакты</a>
 
         <div class="page-header__nav-user">
           <a href="#" class="page-header__nav-user-link">
@@ -51,6 +53,7 @@
       </div>
     </div>
   </header>
+
   <main class="main">
     <article class="article">
       <div class="article__container">
@@ -93,13 +96,13 @@
       <div class="page-footer__information">
         <div class="page-footer__information-links">
           <a href="#" class="page-footer__information-link">Календарь мероприятий</a>
-          <a href="#" class="page-footer__information-link">Провести мероприятие</a>
+          <a class="js-eventOpen page-footer__information-link">Провести мероприятие</a>
           <a href="#" class="page-footer__information-link">Стать арендатором</a>
           <a href="#" class="page-footer__information-link">Наши проекты</a>
-          <a href="#" class="page-footer__information-link">Контакты</a>
+          <a href="#contacts" class="page-footer__information-link">Контакты</a>
         </div>
         <form class="feedback">
-          <h4 class="feedback__title">Подпишись и будь в курсе происходящего</h4>
+          <h6 class="feedback__title">Подпишись и будь в курсе происходящего</h6>
           <!--    <input class="btn feedback__subscription__email" type="email" placeholder="Email"/>-->
 
           <label class="feedback__subscription">
@@ -107,18 +110,52 @@
             <button class="btn feedback__subscription__button" type="submit">Подписаться</button>
           </label>
           <div class="form__check-list">
-            <label class="form__check check">
-              <input type="checkbox" name="agree" class="check__input" required checked />
+            <label class="form__check check" for=feedback_agree>
+              <input type="checkbox" name="agree" id=feedback_agree class="check__input" required checked />
               <span class="check__mark"></span>
               <span class="check__label check__label--s">
                 Согласен на обработку персональных данных
               </span>
             </label>
+
           </div>
         </form>
+
+      </div>
+      <div class="page-footer__btns">
+        <form action="https://vk.com" target="_blank">
+          <button class="x-btn">
+            <svg class="page-footer__btn-icon">
+              <use xlink:href="assets/icons/symbols.svg#vk"></use>
+            </svg>
+          </button>
+        </form>
+        <form action="https://www.instagram.com" target="_blank">
+          <button class="x-btn">
+            <svg class="page-footer__btn-icon">
+              <use xlink:href="assets/icons/symbols.svg#instagram"></use>
+            </svg>
+          </button>
+        </form>
+      </div>
+      <p class="page-footer__millennials">© Millennials 2022</p>
+      <div class="page-footer__links">
+        <div class="page-footer__links-policy">
+          <p class="page-footer__links-h5">Политика конфиденциальности</p>
+          <p class="page-footer__links-h5">Cookies</p>
+        </div>
+        <div class="page-footer__links-tagree">
+          <p class="page-footer__links-h5">Создание и продвижение</p>
+          <a href="https://tagree.ru/agency/" target="_blank">
+            <svg class="page-footer__tagree-icon">
+              <use xlink:href="assets/icons/symbols.svg#tagree"></use>
+            </svg>
+          </a>
+        </div>
       </div>
     </div>
   </footer>
+
 </body>
 
 </html>
